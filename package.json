@@ -1,13 +1,14 @@
 {
-  "name": "sone-template-react",
+  "name": "@sone-dao/tone-react-provider-session",
   "version": "1.0.0",
-  "repository": "https://github.com/sone-dao/sone-template-react.git",
+  "repository": "https://github.com/sone-dao/tone-react-provider-session.git",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
     "dev": "node ./dev.js"
   },
   "dependencies": {
+    "next": "13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
