@@ -1,16 +1,11 @@
 {
   "name": "@sone-dao/tone-react-provider-session",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/sone-dao/tone-react-provider-session.git",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
     "dev": "node ./dev.js"
-  },
-  "dependencies": {
-    "next": "13.1.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
@@ -19,14 +14,22 @@
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "next": "^13.1.6",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.12.1",
     "rollup-plugin-dts": "^5.1.1",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.58.0",
     "tslib": "^2.5.0",
     "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "files": [
     "dist"
