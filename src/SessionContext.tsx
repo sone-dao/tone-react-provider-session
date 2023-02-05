@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router'
-import React, { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 interface ISessionContext {
   debug: boolean
   analyticsId: string
   isLoggedIn: boolean
-  user: User
+  user: IUser
   setAnalyticsId: Function
   setLoggedIn: Function
   setUser: Function
 }
 
-type User = {
+interface IUser {
   id: string
   display: string
 }
@@ -45,9 +45,9 @@ interface ISessionProviderProps {
 }
 
 const SessionProvider: React.FC<ISessionProviderProps> = ({ children }) => {
-  const [isLoggedIn, setLoggedIn] = useState<boolean>(false)
-  const [analyticsId, setAnalyticsId] = useState<string>('')
-  const [user, setUser] = useState<User>(userDefault)
+  const [isLoggedIn, setLoggedIn] = useState(false)
+  const [analyticsId, setAnalyticsId] = useState('')
+  const [user, setUser] = useState(userDefault)
 
   const { query } = useRouter()
   const debug = query.debug?.toString() === 'true'
